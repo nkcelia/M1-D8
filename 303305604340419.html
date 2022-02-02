@@ -9,7 +9,7 @@
   </head>
   <body data-new-gr-c-s-check-loaded="14.1047.0" data-gr-ext-installed=""><div id="i4c-draggable-container" style="position: fixed; z-index: 1499; width: 0px; height: 0px;"><div data-reactroot="" class="resolved" style="all: initial;"></div></div>
     <div>
-      <h1>This is the title of the page</h1>
+      <h1 class = "newTitle">This is the title of the page</h1>
       <h2>This is the subtitle of the page</h2>
     </div>
 
@@ -28,10 +28,10 @@
         <li>3rd</li>
       </ul>
 
-      <a href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/strive.school">This link goes to Strive School</a>
+      <a href id ="mylink"="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/strive.school">This link goes to Strive School</a>
 
       <div>
-        <p>This text is just for the exercise</p>
+        <p id ="myDIV">This text is just for the exercise</p>
       </div>
 
       <div>
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <div>
+    <div >
       <p>And this text is just for the exercise too!</p>
       <h2 style="color: red">
         Save this page on your computer and open it with VSCode to get the
@@ -52,15 +52,20 @@
       */
 
       const changeTitle = function (newTitle) {
-        //
-      };
+         let newTitle = document.getElementById('documentTitle')
+          newTitle.innerHTML 
+       
+      };  
 
       /* EXERCISE 2
        Write a function for changing the class of the title of the page in "myHeading".
       */
 
+
       const addClassToTitle = function () {
-        //
+        let newTitle = document.getElementById("myHeading")
+        newTitle.classList.toggle("myHeading")
+                   
       };
 
       /* EXERCISE 3
@@ -69,13 +74,18 @@
 
       const changePcontent = function () {
         //
+        let div = document.getElementById("myDiv");
+        document.getElementById("myDiv").children.length
+
       };
 
       /* EXERCISE 4
        Write a function for changing the href property of every link to https://www.google.com
       */
 
-      const changeUrls = function () {
+      const changeUrls = function ()  {
+       document.getElementById("mylink").href = "https://www.google.com/";
+       document.getElementById("let try").innerHTML = "The link can be true"
         //
       };
 
